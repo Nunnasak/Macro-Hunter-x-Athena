@@ -6,6 +6,9 @@ SetCapsLockState, Off
 CoordMode, Pixel, Window
 CoordMode, Mouse, Window
 
+percentcheck = false
+detect = false
+
 IfNotExist, %A_ScriptDir%\bin
 {
 	msgbox,, file missing,Look like you didn't extract file,3
@@ -31,69 +34,85 @@ removetooltip() {
 
 $f1::
 	loop,
+		{
+			ImageSearch, x, y, 68, 76, 215, 100, *50 %A_ScriptDir%\bin\full.png
+			if Errorlevel = 0
 			{
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\B.png
-				if Errorlevel = 0
-				{				
-					Send b
-				}			
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\C.png
-				if Errorlevel = 0
-				{				
-					Send c
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\E.png
-				if Errorlevel = 0
-				{				
-					Send e
-				}			
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\L.png
-				if Errorlevel = 0
-				{				
-					Send l
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\N.png
-				if Errorlevel = 0
-				{				
-					Send n
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\Q.png
-				if Errorlevel = 0
-				{				
-					Send q
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\R.png
-				if Errorlevel = 0
-				{				
-					Send r
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\S.png
-				if Errorlevel = 0
-				{				
-					Send s
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\T.png
-				if Errorlevel = 0
-				{				
-					Send t
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\V.png
-				if Errorlevel = 0
-				{				
-					Send v
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\W.png
-				if Errorlevel = 0
-				{				
-					Send w
-				}
-				ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\X.png
-				if Errorlevel = 0
-				{				
-					Send x
-				}
+				send j
+				sleep 2000
 			}
-Return
-
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\B.png
+			if Errorlevel = 0
+			{				
+				Send b
+				sleep 1250
+			}			
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\C.png
+			if Errorlevel = 0
+			{				
+				Send c
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\E.png
+			if Errorlevel = 0
+			{				
+				Send e
+				sleep 1250
+			}			
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\L.png
+			if Errorlevel = 0
+			{				
+				Send l
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\N.png
+			if Errorlevel = 0
+			{				
+				Send n
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\Q.png
+			if Errorlevel = 0
+			{				
+				Send q
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\R.png
+			if Errorlevel = 0
+			{				
+				Send r
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\S.png
+			if Errorlevel = 0
+			{				
+				Send s
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\T.png
+			if Errorlevel = 0
+			{				
+				Send t
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\V.png
+			if Errorlevel = 0
+			{				
+				Send v
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\W.png
+			if Errorlevel = 0
+			{				
+				Send w
+				sleep 1250
+			}
+			ImageSearch, x, y, 200, 200, 500, 500, *50 %A_ScriptDir%\bin\X.png
+			if Errorlevel = 0
+			{				
+				Send x
+				sleep 1250
+			}
+		}	
 Insert::reload
-Delete::ExitApp
+Delete::ExitApp 
